@@ -68,3 +68,8 @@ warn() { printf '%s[!]%s %s\n' "$Y" "$N" "$*" >&2; }
 # Print an error message.
 err()  { printf '%s[-]%s %s\n' "$R" "$N" "$*" >&2; }
 # Print an error and exit.
+die()  { err "$*"; exit 1; }
+
+# Stop a running spinner without printing anything.
+spinner_cleanup() {
+  if [ -n "${SPINNER_PID:-}" ] && kill -0 "$SPINNER_PID" 2>/dev/null; then
