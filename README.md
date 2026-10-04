@@ -158,3 +158,13 @@ sudo Ch4120N-NetPinner <command> [flags]
 └─────────┬──────────┘
           │
           ▼
+┌────────────────────┐
+│  Suggest IP        │
+│  based on current  │
+│  CIDR + gateway    │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│  Backup config     │
+│  *.bak.<timestamp> │
