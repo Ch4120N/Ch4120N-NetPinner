@@ -308,3 +308,8 @@ snd_file_for() {
 }
 
 # Apply a static configuration via systemd-networkd.
+snd_set_static() {
+  local iface="$1" addr="$2" prefix="$3" gw="$4" dns="$5"
+  local f; f=$(snd_file_for "$iface")
+  [ -n "$f" ] || f="/etc/systemd/network/20-${iface}.network"
+  [ -f "$f" ] && cp -a "$f" "${f}.bak.$(date +%s)"
