@@ -248,3 +248,13 @@ Ch4120N-NetPinner status
 
 ## 🛠️ Troubleshooting
 
+<details>
+<summary><strong>“This command requires root”</strong></summary>
+
+Run with `sudo`. On systems where `sudo` isn't installed:
+
+```bash
+su -c 'Ch4120N-NetPinner set'
+```
+</details>
+
