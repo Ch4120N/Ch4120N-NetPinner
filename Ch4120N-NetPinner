@@ -43,3 +43,8 @@ SPINNER_PID=""
 # Colors, filled in by setup_colors.
 R=; G=; Y=; B=; C=; M=; BOLD=; DIM=; N=
 
+# Initialise the colour palette based on terminal capabilities.
+setup_colors() {
+  if [ "$HAS_TTY" -eq 1 ] && [ -z "${NO_COLOR:-}" ]; then
+    R=$'\e[31m'; G=$'\e[32m'; Y=$'\e[33m'; B=$'\e[34m'
+    C=$'\e[36m'; M=$'\e[35m'; BOLD=$'\e[1m'; DIM=$'\e[2m'; N=$'\e[0m'
