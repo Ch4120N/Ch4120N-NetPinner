@@ -193,3 +193,8 @@ need_root() {
 
 # Identify the active network backend.
 detect_backend() {
+  if is_termux; then
+    echo termux
+    return
+  fi
+  if command -v nmcli >/dev/null 2>&1 && \
