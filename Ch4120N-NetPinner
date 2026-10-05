@@ -428,3 +428,8 @@ ifup_set_static() {
     $1=="iface" && $2==i {skip=1}
     skip && /^$/ {skip=0}
     !skip {print}
+  ' /etc/network/interfaces > /tmp/ifaces.new
+  {
+    echo ""
+    echo "iface $iface inet static"
+    echo "    address $addr/$prefix"
