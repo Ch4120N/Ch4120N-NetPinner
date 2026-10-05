@@ -108,3 +108,13 @@ Proceed? [y/N] y
 git clone https://github.com/Ch4120N/Ch4120N-NetPinner.git
 cd Ch4120N-NetPinner
 chmod +x Ch4120N-NetPinner
+sudo mv Ch4120N-NetPinner /usr/local/bin/
+```
+
+### Manual install
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Ch4120N/Ch4120N-NetPinner/main/Ch4120N-NetPinner \
+  -o /tmp/Ch4120N-NetPinner
+chmod +x /tmp/Ch4120N-NetPinner
+sudo mv /tmp/Ch4120N-NetPinner /usr/local/bin/
