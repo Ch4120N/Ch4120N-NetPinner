@@ -38,3 +38,8 @@ HAS_TTY=0
 
 AUTO=0
 QUIET="${NETPINNER_QUIET:-0}"
+SPINNER_PID=""
+
+# Colors, filled in by setup_colors.
+R=; G=; Y=; B=; C=; M=; BOLD=; DIM=; N=
+
