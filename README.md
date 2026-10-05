@@ -258,3 +258,13 @@ su -c 'Ch4120N-NetPinner set'
 ```
 </details>
 
+<details>
+<summary><strong>“No active NetworkManager connection”</strong></summary>
+
+Make sure Wi-Fi / Ethernet is actually connected:
+
+```bash
+nmcli connection show --active
+```
+</details>
+
