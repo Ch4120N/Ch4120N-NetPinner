@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Ch4120N-NetPinner
+#
+# Make this machine's IPv4 address permanent on the current network without
