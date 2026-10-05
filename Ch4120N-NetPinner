@@ -373,3 +373,8 @@ eth['addresses'] = [f"{os.environ['ADDR']}/{os.environ['PREFIX']}"]
 eth['routes'] = [{'to': 'default', 'via': os.environ['GW']}]
 eth['nameservers'] = {'addresses': [x.strip() for x in os.environ['DNS'].split(',') if x.strip()]}
 with open(f, 'w') as fh: yaml.safe_dump(cfg, fh, sort_keys=False)
+PY
+  else
+    warn "python3 + PyYAML not found, writing a standalone file."
+    cat > "$f" <<EOF
+network:
