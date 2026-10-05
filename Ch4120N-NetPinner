@@ -123,3 +123,8 @@ run_spin() {
     [ -s "$logfile" ] && cat "$logfile" >&2
   fi
   rm -f "$logfile"
+  return "$rc"
+}
+
+# Print a compact summary block.
+print_summary() {
