@@ -98,3 +98,13 @@ Proceed? [y/N] y
 | Raspberry Pi OS | dhcpcd · NetworkManager | ⚠️ See notes |
 | Termux (Android) | — | ℹ️ Status only |
 
+---
+
+## 📦 Installation
+
+### Quick install (system-wide)
+
+```bash
+git clone https://github.com/Ch4120N/Ch4120N-NetPinner.git
+cd Ch4120N-NetPinner
+chmod +x Ch4120N-NetPinner
