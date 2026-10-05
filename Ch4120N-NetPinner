@@ -568,3 +568,8 @@ cmd_set() {
     netplan|systemd-networkd|ifupdown)
       local iface; iface=$(active_iface)
       [ -n "$iface" ] || die "No active network interface found."
+      local cur cur_ip cur_pfx cur_gw base suggest ip pfx gw dns
+      cur=$(iface_ipv4 "$iface"); cur_ip="${cur%%/*}"; cur_pfx="${cur##*/}"
+      cur_gw=$(iface_gw "$iface"); base="${cur_ip%.*}"; suggest="${base}.50"
+
+      if [ "${AUTO:-0}" = 1 ]; then
