@@ -93,3 +93,8 @@ spinner_start() {
     while :; do
       printf '\r%s[%s]%s %s' "$C" "${chars:$(( i++ % ${#chars} )):1}" "$N" "$msg"
       sleep 0.1
+    done
+  ) &
+  SPINNER_PID=$!
+}
+
