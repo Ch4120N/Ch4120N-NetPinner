@@ -523,3 +523,8 @@ interactive_nm() {
     if [ "${AUTO:-0}" != 1 ]; then
       read -rp "Use it anyway? [y/N] " a
       [[ "$a" =~ ^[Yy]$ ]] || die "Aborted by user."
+    fi
+  fi
+
+  run_spin "Applying static configuration to '$name'" \
+    nm_set_static "$name" "$ip" "$pfx" "$gw" "$dns"
