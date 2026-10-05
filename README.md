@@ -38,3 +38,13 @@
 | | Feature |
 |---|---|
 | 🎯 | **One-command static IP** — interactive prompts with smart defaults |
+| 🔌 | **Multi-backend** — NetworkManager, netplan, systemd-networkd, ifupdown |
+| 🧠 | **Smart detection** — auto-detects the active network backend |
+| 🔒 | **Non-destructive** — backs up configs before every change |
+| 🌐 | **Roaming-safe** — NetworkManager profiles per SSID keep other networks on DHCP |
+| 🎨 | **Beautiful UI** — spinner, countdown, typewriter banner, colour-coded output |
+| 📱 | **Termux-aware** — read-only status for Android |
+| 🔇 | **Quiet mode** — perfect for scripts and CI |
+| ♻️ | **One-command revert** — go back to DHCP instantly |
+| 🧪 | **Conflict check** — warns if the target IP already answers on the LAN |
+
