@@ -493,3 +493,8 @@ interactive_nm() {
 
   local cur_cidr cur_ip cur_pfx cur_gw base suggest
   cur_cidr=$(iface_ipv4 "$dev" || true)
+  [ -n "$cur_cidr" ] || die "Interface $dev has no IPv4 address."
+  cur_ip="${cur_cidr%%/*}"; cur_pfx="${cur_cidr##*/}"
+  cur_gw=$(iface_gw "$dev" || true)
+  base="${cur_ip%.*}"; suggest="${base}.50"
+
