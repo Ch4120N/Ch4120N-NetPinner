@@ -243,3 +243,8 @@ ip_in_use() {
   ping -c1 -W1 "$ip" >/dev/null 2>&1 && return 0
   if command -v ip >/dev/null 2>&1; then
     ip neigh show "$ip" 2>/dev/null | grep -qE 'lladdr' && return 0
+  fi
+  return 1
+}
+
+# NetworkManager backend.
