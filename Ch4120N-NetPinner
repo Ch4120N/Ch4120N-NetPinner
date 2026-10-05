@@ -623,3 +623,8 @@ cmd_revert() {
   esac
 }
 
+# Show current IP, method and gateway.
+cmd_status() {
+  local backend; backend=$(detect_backend)
+  log "Backend detected: $backend"
+
