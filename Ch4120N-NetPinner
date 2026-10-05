@@ -98,3 +98,8 @@ spinner_start() {
   SPINNER_PID=$!
 }
 
+# Stop the spinner and print a final line.
+spinner_stop() {
+  local final="${1:-}"
+  spinner_cleanup
+  if [ "$HAS_TTY" -eq 1 ] && [ "$QUIET" != "1" ]; then
