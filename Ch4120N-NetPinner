@@ -708,3 +708,8 @@ main() {
 
   local cmd="${args[0]:-help}"
 
+  # Interactive commands need a TTY unless --auto was passed.
+  if [ "$cmd" = "set" ] && [ "$AUTO" != "1" ] && [ "$HAS_TTY" != "1" ]; then
+    warn "No TTY detected, falling back to --auto behaviour."
+    AUTO=1
+  fi
