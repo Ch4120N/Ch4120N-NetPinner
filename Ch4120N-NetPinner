@@ -413,3 +413,8 @@ eth['dhcp4'] = True; eth['dhcp6'] = True
 with open(f, 'w') as fh: yaml.safe_dump(cfg, fh, sort_keys=False)
 PY
     netplan apply
+  else
+    warn "Edit $f manually, set dhcp4: true, then run: sudo netplan apply"
+  fi
+}
+
