@@ -348,3 +348,8 @@ EOF
 netplan_file_for() {
   grep -rls "$1" /etc/netplan/*.yaml 2>/dev/null | head -n1
 }
+
+# Apply a static configuration via netplan.
+netplan_set_static() {
+  local iface="$1" addr="$2" prefix="$3" gw="$4" dns="$5"
+  local f; f=$(netplan_file_for "$iface")
