@@ -63,3 +63,8 @@ disable_colors() {
 log()  { printf '%s[*]%s %s\n' "$B" "$N" "$*"; }
 # Print a success message.
 ok()   { printf '%s[+]%s %s\n' "$G" "$N" "$*"; }
+# Print a warning message.
+warn() { printf '%s[!]%s %s\n' "$Y" "$N" "$*" >&2; }
+# Print an error message.
+err()  { printf '%s[-]%s %s\n' "$R" "$N" "$*" >&2; }
+# Print an error and exit.
