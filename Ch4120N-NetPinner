@@ -283,3 +283,8 @@ nm_set_static() {
   local conn="$1" addr="$2" prefix="$3" gw="$4" dns="$5"
   nmcli connection modify "$conn" \
     ipv4.method manual \
+    ipv4.addresses "${addr}/${prefix}" \
+    ipv4.gateway  "$gw" \
+    ipv4.dns      "$dns"
+  nmcli connection up "$conn" >/dev/null
+}
