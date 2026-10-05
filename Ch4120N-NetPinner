@@ -538,3 +538,8 @@ interactive_nm() {
     warn "Gateway not reachable."
   fi
   if ping -c1 -W2 1.1.1.1 >/dev/null 2>&1; then
+    ok "Internet reachable."
+  else
+    warn "Internet unreachable (check DNS / route)."
+  fi
+
