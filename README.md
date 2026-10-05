@@ -48,3 +48,13 @@
 | ♻️ | **One-command revert** — go back to DHCP instantly |
 | 🧪 | **Conflict check** — warns if the target IP already answers on the LAN |
 
+---
+
+## 🎬 Demo
+
+```text
+$ sudo Ch4120N-NetPinner set
+
+Ch4120N-NetPinner
+Static IP helper for Linux and Termux
+
