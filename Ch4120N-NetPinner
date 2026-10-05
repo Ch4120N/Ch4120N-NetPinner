@@ -158,3 +158,8 @@ show_banner() {
   printf '%sStatic IP helper for Linux and Termux%s\n\n' "$DIM" "$N"
 }
 
+# Show a countdown while waiting for the network to settle.
+countdown() {
+  local seconds="$1" msg="$2"
+  if [ "$HAS_TTY" -ne 1 ] || [ "$QUIET" = "1" ]; then
+    sleep "$seconds"
