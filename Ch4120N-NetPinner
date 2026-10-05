@@ -573,3 +573,8 @@ cmd_set() {
       cur_gw=$(iface_gw "$iface"); base="${cur_ip%.*}"; suggest="${base}.50"
 
       if [ "${AUTO:-0}" = 1 ]; then
+        ip="$suggest"; pfx="$cur_pfx"; gw="$cur_gw"; dns="${cur_gw},1.1.1.1"
+      else
+        log "Backend: $backend   Interface: $iface"
+        read -rp "Static IP     [$suggest]: " ip;  ip="${ip:-$suggest}"
+        read -rp "Prefix (CIDR) [$cur_pfx]: " pfx; pfx="${pfx:-$cur_pfx}"
