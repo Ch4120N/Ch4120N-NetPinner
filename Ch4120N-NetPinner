@@ -33,3 +33,8 @@
 set -euo pipefail
 
 # Global state.
+HAS_TTY=0
+[ -t 1 ] && HAS_TTY=1
+
+AUTO=0
+QUIET="${NETPINNER_QUIET:-0}"
