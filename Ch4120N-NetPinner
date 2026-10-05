@@ -388,3 +388,8 @@ network:
         - to: default
           via: $gw
       nameservers:
+        addresses: [$(tr ',' ', ' <<<"$dns")]
+EOF
+    chmod 600 "$f"
+  fi
+
