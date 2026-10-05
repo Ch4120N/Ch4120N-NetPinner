@@ -208,3 +208,13 @@ sudo Ch4120N-NetPinner set
 sudo Ch4120N-NetPinner set --auto --quiet
 ```
 
+**Revert back to DHCP**
+
+```bash
+sudo Ch4120N-NetPinner revert
+```
+
+**Check what's going on**
+
+```bash
+Ch4120N-NetPinner status
