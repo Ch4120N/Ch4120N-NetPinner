@@ -328,3 +328,13 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 [![Email](https://img.shields.io/badge/Email-contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:Ch4120N@Proton.me)
 
 </div>
+
+---
+
+<div align="center">
+
+⭐ **If this tool saved you time, drop a star!** ⭐
+
+Made with 🖤 by **Ch4120N**
+
+</div>
