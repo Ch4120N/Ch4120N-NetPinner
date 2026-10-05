@@ -583,3 +583,8 @@ cmd_set() {
         dns="${dns:-${cur_gw},1.1.1.1}"
       fi
 
+      case "$backend" in
+        netplan)          run_spin "Applying netplan configuration"         netplan_set_static "$iface" "$ip" "$pfx" "$gw" "$dns" ;;
+        systemd-networkd) run_spin "Applying systemd-networkd configuration" snd_set_static     "$iface" "$ip" "$pfx" "$gw" "$dns" ;;
+        ifupdown)         run_spin "Applying ifupdown configuration"          ifup_set_static    "$iface" "$ip" "$pfx" "$gw" "$dns" ;;
+      esac
