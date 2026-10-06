@@ -368,3 +368,8 @@ except FileNotFoundError:
     cfg = {}
 cfg.setdefault('network', {}).setdefault('version', 2)
 eth = cfg['network'].setdefault('ethernets', {}).setdefault(iface, {})
+eth['dhcp4'] = False; eth['dhcp6'] = False
+eth['addresses'] = [f"{os.environ['ADDR']}/{os.environ['PREFIX']}"]
+eth['routes'] = [{'to': 'default', 'via': os.environ['GW']}]
+eth['nameservers'] = {'addresses': [x.strip() for x in os.environ['DNS'].split(',') if x.strip()]}
+with open(f, 'w') as fh: yaml.safe_dump(cfg, fh, sort_keys=False)
