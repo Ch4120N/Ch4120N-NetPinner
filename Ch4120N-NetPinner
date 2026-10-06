@@ -553,3 +553,8 @@ interactive_nm() {
 
 # Apply a static IP to the current network.
 cmd_set() {
+  if is_termux; then
+    warn "Termux detected. Android does not allow setting a static IP."
+    warn "Use your router's DHCP reservation feature instead."
+    exit 1
+  fi
