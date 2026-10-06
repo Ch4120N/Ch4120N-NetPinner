@@ -78,3 +78,13 @@ Proceed? [y/N] y
 [*] Verifying network 3
   IPv4    : 192.168.1.50/24
   Gateway : 192.168.1.1
+[+] Gateway reachable.
+[+] Internet reachable.
+
+[+] Done.
+```
+
+---
+
+## 🖥️ Supported Platforms
+
