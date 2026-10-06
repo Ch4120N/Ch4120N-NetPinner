@@ -103,3 +103,8 @@ spinner_stop() {
   local final="${1:-}"
   spinner_cleanup
   if [ "$HAS_TTY" -eq 1 ] && [ "$QUIET" != "1" ]; then
+    printf '\r\033[K'
+  fi
+  [ -n "$final" ] && printf '%s\n' "$final"
+  return 0
+}
