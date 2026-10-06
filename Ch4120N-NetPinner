@@ -168,3 +168,8 @@ countdown() {
   local i
   for (( i=seconds; i>0; i-- )); do
     printf '\r%s[*]%s %s %d' "$B" "$N" "$msg" "$i"
+    sleep 1
+  done
+  printf '\r\033[K'
+}
+
