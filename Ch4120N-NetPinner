@@ -358,3 +358,8 @@ netplan_set_static() {
 
   if command -v python3 >/dev/null 2>&1 && \
      python3 -c 'import yaml' >/dev/null 2>&1; then
+    IFACE="$iface" ADDR="$addr" PREFIX="$prefix" GW="$gw" DNS="$dns" FILE="$f" \
+    python3 - <<'PY'
+import os, yaml
+f = os.environ['FILE']; iface = os.environ['IFACE']
+try:
