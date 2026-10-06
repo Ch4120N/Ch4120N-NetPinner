@@ -178,3 +178,13 @@ sudo Ch4120N-NetPinner <command> [flags]
 ```
 
 - **NetworkManager** → modifies the per-SSID profile, so other Wi-Fi networks keep DHCP automatically.
+- **netplan / systemd-networkd / ifupdown** → binds the static IP to the interface *for all networks*. A router-side DHCP reservation is usually preferable when roaming.
+
+---
+
+## ⚙️ Flags & Environment
+
+| Flag / Variable | Effect |
+|---|---|
+| `--auto` | Non-interactive mode, accept suggested defaults |
+| `--quiet`, `-q` | Disable spinner animation |
