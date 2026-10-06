@@ -238,3 +238,13 @@ Android's networking stack (`netd`) does **not** allow changing the interface IP
 
 **Recommended approach on Android:** use your router's **DHCP reservation** feature to pin the device to a permanent IP by MAC address.
 
+```bash
+pkg install termux-api
+# Install the Termux:API companion app from F-Droid
+Ch4120N-NetPinner status
+```
+
+---
+
+## 🛠️ Troubleshooting
+
