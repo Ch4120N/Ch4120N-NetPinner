@@ -363,3 +363,8 @@ netplan_set_static() {
 import os, yaml
 f = os.environ['FILE']; iface = os.environ['IFACE']
 try:
+    with open(f) as fh: cfg = yaml.safe_load(fh) or {}
+except FileNotFoundError:
+    cfg = {}
+cfg.setdefault('network', {}).setdefault('version', 2)
+eth = cfg['network'].setdefault('ethernets', {}).setdefault(iface, {})
