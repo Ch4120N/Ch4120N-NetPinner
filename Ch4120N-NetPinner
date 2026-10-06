@@ -173,3 +173,8 @@ countdown() {
   printf '\r\033[K'
 }
 
+# Detect whether we are running inside Termux on Android.
+is_termux() {
+  [ -n "${TERMUX_VERSION:-}" ] && return 0
+  case "${PREFIX:-}" in *com.termux*) return 0 ;; esac
+  [ -d "/data/data/com.termux/files/usr" ] && return 0
