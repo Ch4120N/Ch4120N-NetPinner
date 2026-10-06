@@ -603,3 +603,8 @@ cmd_set() {
 cmd_revert() {
   if is_termux; then
     warn "Termux detected. Nothing to revert on Android."
+    exit 1
+  fi
+  need_root revert
+
+  local backend; backend=$(detect_backend)
