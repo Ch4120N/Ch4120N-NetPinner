@@ -248,3 +248,8 @@ ip_in_use() {
 }
 
 # NetworkManager backend.
+
+# Return the first active, non-virtual NetworkManager connection.
+nm_active_line() {
+  nmcli -t -f NAME,DEVICE,TYPE connection show --active 2>/dev/null \
+    | grep -vE '^(docker|veth|br-|virbr)' | head -n1
