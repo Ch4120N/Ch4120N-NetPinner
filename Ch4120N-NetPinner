@@ -313,3 +313,8 @@ snd_set_static() {
   local f; f=$(snd_file_for "$iface")
   [ -n "$f" ] || f="/etc/systemd/network/20-${iface}.network"
   [ -f "$f" ] && cp -a "$f" "${f}.bak.$(date +%s)"
+  cat > "$f" <<EOF
+[Match]
+Name=$iface
+
+[Network]
