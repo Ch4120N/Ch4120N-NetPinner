@@ -68,3 +68,13 @@ DNS           [192.168.1.1,1.1.1.1]:
 ────────────────────────────
 Planned changes
 ────────────────────────────
+  Profile : HomeWiFi
+  IP      : 192.168.1.50/24
+  Gateway : 192.168.1.1
+  DNS     : 192.168.1.1,1.1.1.1
+
+Proceed? [y/N] y
+[+] Applying static configuration to 'HomeWiFi'
+[*] Verifying network 3
+  IPv4    : 192.168.1.50/24
+  Gateway : 192.168.1.1
