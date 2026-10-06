@@ -288,3 +288,13 @@ sudo apt install python3-yaml
 NetPinner falls back to a standalone YAML file if PyYAML is unavailable, but merging into your existing netplan file is safer.
 </details>
 
+<details>
+<summary><strong>Colours look broken</strong></summary>
+
+```bash
+Ch4120N-NetPinner --no-color status
+# or
+NO_COLOR=1 Ch4120N-NetPinner status
+```
+</details>
+
