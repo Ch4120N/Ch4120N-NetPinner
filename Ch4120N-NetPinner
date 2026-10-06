@@ -3,3 +3,8 @@
 # Ch4120N-NetPinner
 #
 # Make this machine's IPv4 address permanent on the current network without
+# breaking other Wi-Fi / Ethernet networks.
+#
+# Supported backends:
+#   - NetworkManager
+#   - netplan
