@@ -268,3 +268,8 @@ nm_status() {
   dev=$(cut -d: -f2 <<<"$line")
   type=$(cut -d: -f3 <<<"$line")
   printf '  Connection : %s\n' "$name"
+  printf '  Device     : %s  (%s)\n' "$dev" "$type"
+  printf '  IPv4       : %s\n' "$(iface_ipv4 "$dev" || echo none)"
+  printf '  Gateway    : %s\n' "$(iface_gw  "$dev" || echo none)"
+  printf '  Method     : %s\n' "$(nmcli -t -f ipv4.method connection show "$name" | cut -d: -f2)"
+  printf '  DNS        : %s\n' "$(nmcli -t -f IP4.DNS connection show "$name" | cut -d: -f2 | paste -sd, -)"
