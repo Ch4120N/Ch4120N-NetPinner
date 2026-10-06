@@ -328,3 +328,8 @@ EOF
 
 # Return a systemd-networkd interface to DHCP.
 snd_revert() {
+  local iface="$1"
+  local f; f=$(snd_file_for "$iface") || true
+  [ -n "$f" ] || die "No .network file found for $iface"
+  cp -a "$f" "${f}.bak.$(date +%s)"
+  cat > "$f" <<EOF
