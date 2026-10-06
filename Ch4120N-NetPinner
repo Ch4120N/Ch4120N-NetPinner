@@ -133,3 +133,8 @@ print_summary() {
   local line
   for line in "$@"; do
     printf '  %s\n' "$line"
+  done
+  printf '\n'
+}
+
+# Type a string with a small per-character delay.
