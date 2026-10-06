@@ -628,3 +628,8 @@ cmd_status() {
   local backend; backend=$(detect_backend)
   log "Backend detected: $backend"
 
+  if [ "$backend" = "termux" ]; then
+    termux_status
+    return
+  fi
+
