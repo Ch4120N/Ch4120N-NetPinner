@@ -8,3 +8,13 @@
 [![Shell](https://img.shields.io/badge/shell-bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)](#)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](#-license)
 [![Author](https://img.shields.io/badge/author-Ch4120N-purple?style=for-the-badge&logo=github)](https://github.com/Ch4120N)
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=8A2BE2&center=true&vCenter=true&width=600&lines=Static+IP+made+simple.;Multi-backend+support.;Termux-friendly.;Zero+config+files+by+hand." alt="Typing SVG" />
+
+</div>
+
+---
+
+## 📖 Table of Contents
+
+- [✨ Features](#-features)
