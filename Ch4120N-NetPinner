@@ -418,3 +418,8 @@ PY
   fi
 }
 
+# ifupdown backend.
+
+# Apply a static configuration via /etc/network/interfaces.
+ifup_set_static() {
+  local iface="$1" addr="$2" prefix="$3" gw="$4" dns="$5"
