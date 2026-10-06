@@ -618,3 +618,8 @@ cmd_revert() {
       ;;
     netplan)          run_spin "Reverting netplan configuration"         netplan_revert "$(active_iface)" ;;
     systemd-networkd) run_spin "Reverting systemd-networkd configuration" snd_revert     "$(active_iface)" ;;
+    ifupdown)         run_spin "Reverting ifupdown configuration"         ifup_revert    "$(active_iface)" ;;
+    *) die "Unknown backend." ;;
+  esac
+}
+
