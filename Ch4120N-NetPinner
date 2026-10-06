@@ -398,3 +398,8 @@ EOF
 
 # Return a netplan interface to DHCP.
 netplan_revert() {
+  local iface="$1"
+  local f; f=$(netplan_file_for "$iface") || true
+  [ -n "$f" ] || die "No netplan file for $iface"
+  cp -a "$f" "${f}.bak.$(date +%s)"
+  if command -v python3 >/dev/null 2>&1 && python3 -c 'import yaml' >/dev/null 2>&1; then
