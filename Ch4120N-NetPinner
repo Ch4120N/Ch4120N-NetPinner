@@ -478,3 +478,8 @@ termux_status() {
   warn "Use your router's DHCP reservation page for a permanent IP."
 }
 
+# Interactive drivers.
+
+# Interactive NetworkManager setup flow.
+interactive_nm() {
+  local line name dev type
