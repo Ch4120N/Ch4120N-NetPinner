@@ -83,3 +83,8 @@ trap spinner_cleanup EXIT
 # Start an animated spinner for a long-running task.
 spinner_start() {
   local msg="$1"
+  if [ "$HAS_TTY" -ne 1 ] || [ "$QUIET" = "1" ]; then
+    printf '%s[*]%s %s\n' "$B" "$N" "$msg"
+    return 0
+  fi
+  local chars='|/-\'
