@@ -213,3 +213,8 @@ detect_backend() {
 }
 
 # Return the interface carrying the default route.
+active_iface() {
+  if command -v ip >/dev/null 2>&1; then
+    ip -o -4 route show default 2>/dev/null | awk '{print $5; exit}'
+  fi
+}
