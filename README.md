@@ -268,3 +268,13 @@ nmcli connection show --active
 ```
 </details>
 
+<details>
+<summary><strong>Gateway unreachable after applying</strong></summary>
+
+The chosen IP may be outside your DHCP range or already taken. Revert and pick another:
+
+```bash
+sudo Ch4120N-NetPinner revert
+sudo Ch4120N-NetPinner set
+```
+</details>
