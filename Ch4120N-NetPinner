@@ -433,3 +433,8 @@ ifup_set_static() {
     echo ""
     echo "iface $iface inet static"
     echo "    address $addr/$prefix"
+    echo "    gateway $gw"
+    echo "    dns-nameservers $(tr ',' ' ' <<<"$dns")"
+  } >> /tmp/ifaces.new
+  mv /tmp/ifaces.new /etc/network/interfaces
+  ifdown "$iface" 2>/dev/null || true
