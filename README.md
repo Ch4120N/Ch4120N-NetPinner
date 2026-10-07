@@ -318,3 +318,13 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ---
 
+## 👤 Author
+
+<div align="center">
+
+**Ch4120N**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Ch4120N-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ch4120N)
+[![Email](https://img.shields.io/badge/Email-contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:Ch4120N@Proton.me)
+
+</div>
