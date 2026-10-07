@@ -458,3 +458,8 @@ ifup_revert() {
 
 # Termux backend, informational only.
 
+# Print the current Android/Termux network state.
+termux_status() {
+  log "Environment: Termux on Android"
+  if command -v termux-wifi-connectioninfo >/dev/null 2>&1; then
+    local info
