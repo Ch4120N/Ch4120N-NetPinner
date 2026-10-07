@@ -208,3 +208,8 @@ detect_backend() {
   elif [ -f /etc/network/interfaces ]; then
     echo ifupdown
   else
+    echo unknown
+  fi
+}
+
+# Return the interface carrying the default route.
