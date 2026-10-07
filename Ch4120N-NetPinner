@@ -163,3 +163,8 @@ countdown() {
   local seconds="$1" msg="$2"
   if [ "$HAS_TTY" -ne 1 ] || [ "$QUIET" = "1" ]; then
     sleep "$seconds"
+    return 0
+  fi
+  local i
+  for (( i=seconds; i>0; i-- )); do
+    printf '\r%s[*]%s %s %d' "$B" "$N" "$msg" "$i"
