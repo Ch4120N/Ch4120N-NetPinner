@@ -128,3 +128,8 @@ run_spin() {
 
 # Print a compact summary block.
 print_summary() {
+  local title="$1"; shift
+  printf '\n%s%s%s\n' "$BOLD$M" "$title" "$N"
+  local line
+  for line in "$@"; do
+    printf '  %s\n' "$line"
