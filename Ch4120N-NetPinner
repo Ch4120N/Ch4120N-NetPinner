@@ -483,3 +483,8 @@ termux_status() {
 # Interactive NetworkManager setup flow.
 interactive_nm() {
   local line name dev type
+  line=$(nm_active_line || true)
+  [ -n "${line:-}" ] || die "No active NetworkManager connection."
+  name=$(cut -d: -f1 <<<"$line")
+  dev=$(cut -d: -f2 <<<"$line")
+  type=$(cut -d: -f3 <<<"$line")
