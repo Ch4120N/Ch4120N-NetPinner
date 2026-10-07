@@ -28,3 +28,13 @@
 - [📱 Termux Notes](#-termux-notes)
 - [🛠️ Troubleshooting](#️-troubleshooting)
 - [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
+- [👤 Author](#-author)
+
+---
+
+## ✨ Features
+
+| | Feature |
+|---|---|
+| 🎯 | **One-command static IP** — interactive prompts with smart defaults |
