@@ -443,3 +443,8 @@ ifup_set_static() {
 
 # Return an ifupdown interface to DHCP.
 ifup_revert() {
+  local iface="$1"
+  cp -a /etc/network/interfaces "/etc/network/interfaces.bak.$(date +%s)"
+  awk -v i="$iface" '
+    $1=="iface" && $2==i {skip=1}
+    skip && /^$/ {skip=0}
