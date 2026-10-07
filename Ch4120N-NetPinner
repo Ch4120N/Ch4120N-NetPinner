@@ -588,3 +588,8 @@ cmd_set() {
         systemd-networkd) run_spin "Applying systemd-networkd configuration" snd_set_static     "$iface" "$ip" "$pfx" "$gw" "$dns" ;;
         ifupdown)         run_spin "Applying ifupdown configuration"          ifup_set_static    "$iface" "$ip" "$pfx" "$gw" "$dns" ;;
       esac
+
+      warn "Note: on '$backend' the static IP applies to $iface for ALL networks."
+      warn "If you roam between LANs, prefer NetworkManager or a router-side"
+      warn "DHCP reservation instead."
+      ;;
