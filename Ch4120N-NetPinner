@@ -118,3 +118,8 @@ run_spin() {
   "$@" >"$logfile" 2>&1 || rc=$?
   if [ "$rc" -eq 0 ]; then
     spinner_stop "$(printf '%s[+]%s %s' "$G" "$N" "$msg")"
+  else
+    spinner_stop "$(printf '%s[-]%s %s' "$R" "$N" "$msg")"
+    [ -s "$logfile" ] && cat "$logfile" >&2
+  fi
+  rm -f "$logfile"
