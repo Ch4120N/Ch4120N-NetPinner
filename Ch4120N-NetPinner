@@ -153,3 +153,8 @@ show_banner() {
   [ "$HAS_TTY" -eq 1 ] || return 0
   [ "$QUIET" = "1" ] && return 0
   printf '\n%s' "$BOLD$M"
+  typewriter "Ch4120N-NetPinner"
+  printf '%s' "$N"
+  printf '%sStatic IP helper for Linux and Termux%s\n\n' "$DIM" "$N"
+}
+
