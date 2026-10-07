@@ -238,3 +238,8 @@ iface_gw() {
 }
 
 # Check whether an IPv4 address is already in use locally.
+ip_in_use() {
+  local ip="$1"
+  ping -c1 -W1 "$ip" >/dev/null 2>&1 && return 0
+  if command -v ip >/dev/null 2>&1; then
+    ip neigh show "$ip" 2>/dev/null | grep -qE 'lladdr' && return 0
