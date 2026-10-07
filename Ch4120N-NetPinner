@@ -298,3 +298,8 @@ nm_revert() {
     ipv4.gateway  "" \
     ipv4.dns      ""
   nmcli connection up "$conn" >/dev/null
+}
+
+# systemd-networkd backend.
+
+# Locate the .network file that matches an interface.
