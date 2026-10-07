@@ -543,3 +543,8 @@ interactive_nm() {
     warn "Internet unreachable (check DNS / route)."
   fi
 
+  echo
+  ok "Done."
+  warn "Other Wi-Fi networks keep using DHCP automatically because"
+  warn "NetworkManager stores a separate profile per SSID."
+}
