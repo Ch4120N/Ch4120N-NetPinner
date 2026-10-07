@@ -168,3 +168,13 @@ sudo Ch4120N-NetPinner <command> [flags]
 ┌────────────────────┐
 │  Backup config     │
 │  *.bak.<timestamp> │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│  Apply + verify    │
+│  (ping gw / WAN)   │
+└────────────────────┘
+```
+
+- **NetworkManager** → modifies the per-SSID profile, so other Wi-Fi networks keep DHCP automatically.
