@@ -88,3 +88,8 @@ spinner_start() {
     return 0
   fi
   local chars='|/-\'
+  (
+    local i=0
+    while :; do
+      printf '\r%s[%s]%s %s' "$C" "${chars:$(( i++ % ${#chars} )):1}" "$N" "$msg"
+      sleep 0.1
