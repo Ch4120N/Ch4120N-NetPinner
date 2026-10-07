@@ -228,3 +228,13 @@ Ch4120N-NetPinner list
 
 ---
 
+## 📱 Termux Notes
+
+Android's networking stack (`netd`) does **not** allow changing the interface IP from a userspace shell — the OS will override any change. NetPinner therefore runs in **read-only mode** on Termux:
+
+- ✅ Show Wi-Fi info via `termux-wifi-connectioninfo`
+- ✅ Show current IPv4 / gateway
+- ❌ Do **not** attempt to write `/system` or `/etc`
+
+**Recommended approach on Android:** use your router's **DHCP reservation** feature to pin the device to a permanent IP by MAC address.
+
