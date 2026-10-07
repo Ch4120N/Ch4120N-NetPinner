@@ -233,3 +233,8 @@ iface_cidr() { local x; x=$(iface_ipv4 "$1"); printf '%s' "${x##*/}"; }
 
 # Return the default gateway for an interface.
 iface_gw() {
+  command -v ip >/dev/null 2>&1 \
+    && ip -4 route show default dev "$1" 2>/dev/null | awk '{print $3; exit}'
+}
+
+# Check whether an IPv4 address is already in use locally.
