@@ -668,3 +668,8 @@ cmd_list() {
 }
 
 # Show usage information.
+usage() {
+  cat <<'EOF'
+Ch4120N-NetPinner - Make this machine's IPv4 address permanent.
+
+Usage:
