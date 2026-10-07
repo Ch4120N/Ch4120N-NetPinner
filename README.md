@@ -88,3 +88,13 @@ Proceed? [y/N] y
 
 ## 🖥️ Supported Platforms
 
+| Distro / OS | Backend | Status |
+|---|---|---|
+| Ubuntu / Debian | netplan · NetworkManager · ifupdown | ✅ Full support |
+| Fedora / RHEL / CentOS | NetworkManager | ✅ Full support |
+| Arch / Manjaro | systemd-networkd · NetworkManager | ✅ Full support |
+| openSUSE | wicked · NetworkManager | ⚠️ Via NetworkManager |
+| Alpine | ifupdown-ng | ⚠️ Partial |
+| Raspberry Pi OS | dhcpcd · NetworkManager | ⚠️ See notes |
+| Termux (Android) | — | ℹ️ Status only |
+
