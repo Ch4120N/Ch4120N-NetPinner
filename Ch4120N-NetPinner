@@ -703,3 +703,8 @@ main() {
       --no-color) disable_colors ;;
       -h|--help)  args+=("help") ;;
       *)          args+=("$a") ;;
+    esac
+  done
+
+  local cmd="${args[0]:-help}"
+
