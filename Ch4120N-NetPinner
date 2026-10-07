@@ -23,3 +23,8 @@
 # Flags:
 #   --auto        Non-interactive, accept defaults
 #   --quiet, -q   Disable spinner animation
+#   --no-color    Disable ANSI colors
+#
+# Environment:
+#   NO_COLOR=1           Disable colors (same as --no-color)
+#   NETPINNER_QUIET=1    Disable spinner (same as --quiet)
