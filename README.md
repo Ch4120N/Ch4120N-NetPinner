@@ -138,3 +138,13 @@ sudo Ch4120N-NetPinner <command> [flags]
 ```
 
 | Command | Description |
+|---|---|
+| `set` | Interactive: ask for IP / prefix / gateway / DNS |
+| `set --auto` | Non-interactive: accept the suggested defaults |
+| `revert` | Return the current profile to DHCP |
+| `status` | Show current IP / method / gateway |
+| `list` | List saved connection profiles |
+| `help` | Show help |
+
+---
+
