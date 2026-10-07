@@ -263,3 +263,8 @@ nm_status() {
   if [ -z "${line:-}" ]; then
     warn "No active connection."
     return
+  fi
+  name=$(cut -d: -f1 <<<"$line")
+  dev=$(cut -d: -f2 <<<"$line")
+  type=$(cut -d: -f3 <<<"$line")
+  printf '  Connection : %s\n' "$name"
