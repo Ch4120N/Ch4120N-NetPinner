@@ -338,3 +338,8 @@ Name=$iface
 
 [Network]
 DHCP=yes
+EOF
+  systemctl restart systemd-networkd
+}
+
+# netplan backend.
