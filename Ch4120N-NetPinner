@@ -318,3 +318,8 @@ snd_set_static() {
 Name=$iface
 
 [Network]
+DHCP=no
+Address=${addr}/${prefix}
+Gateway=$gw
+$(printf 'DNS=%s\n' $(tr ',' ' ' <<<"$dns"))
+EOF
