@@ -393,3 +393,8 @@ EOF
     chmod 600 "$f"
   fi
 
+  netplan generate && netplan apply
+}
+
+# Return a netplan interface to DHCP.
+netplan_revert() {
