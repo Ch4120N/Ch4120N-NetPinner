@@ -563,3 +563,8 @@ cmd_set() {
   local backend; backend=$(detect_backend)
   case "$backend" in
     networkmanager)
+      interactive_nm
+      ;;
+    netplan|systemd-networkd|ifupdown)
+      local iface; iface=$(active_iface)
+      [ -n "$iface" ] || die "No active network interface found."
