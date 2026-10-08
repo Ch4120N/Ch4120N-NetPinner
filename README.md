@@ -308,3 +308,13 @@ NO_COLOR=1 Ch4120N-NetPinner status
 4. Push the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
+Please keep the shell style consistent: `set -euo pipefail`, `shellcheck`-clean, and use `# comment.` (period, sentence case) style comments.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
