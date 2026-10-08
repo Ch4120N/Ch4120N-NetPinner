@@ -198,3 +198,8 @@ detect_backend() {
     return
   fi
   if command -v nmcli >/dev/null 2>&1 && \
+     { { has_systemctl && systemctl is-active --quiet NetworkManager 2>/dev/null; } \
+       || pgrep -x NetworkManager >/dev/null 2>&1; }; then
+    echo networkmanager
+  elif command -v netplan >/dev/null 2>&1 && [ -d /etc/netplan ]; then
+    echo netplan
