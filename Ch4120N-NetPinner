@@ -693,3 +693,8 @@ EOF
 
 # Entry point.
 
+main() {
+  local args=()
+  local a
+  for a in "$@"; do
+    case "$a" in
