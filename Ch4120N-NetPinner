@@ -278,3 +278,8 @@ nm_status() {
 # List NetworkManager connections.
 nm_list() { nmcli -f NAME,DEVICE,TYPE,STATE connection show; }
 
+# Apply a static configuration to a NetworkManager profile.
+nm_set_static() {
+  local conn="$1" addr="$2" prefix="$3" gw="$4" dns="$5"
+  nmcli connection modify "$conn" \
+    ipv4.method manual \
