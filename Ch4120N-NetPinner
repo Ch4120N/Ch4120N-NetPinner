@@ -518,3 +518,8 @@ interactive_nm() {
     [[ "$a" =~ ^[Yy]$ ]] || { warn "Aborted."; exit 0; }
   fi
 
+  if ip_in_use "$ip"; then
+    warn "Warning: $ip already answers on the network (possible conflict)."
+    if [ "${AUTO:-0}" != 1 ]; then
+      read -rp "Use it anyway? [y/N] " a
+      [[ "$a" =~ ^[Yy]$ ]] || die "Aborted by user."
