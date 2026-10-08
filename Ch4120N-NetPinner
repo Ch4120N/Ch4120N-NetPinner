@@ -448,3 +448,8 @@ ifup_revert() {
   awk -v i="$iface" '
     $1=="iface" && $2==i {skip=1}
     skip && /^$/ {skip=0}
+    !skip {print}
+  ' /etc/network/interfaces > /tmp/ifaces.new
+  { echo ""; echo "iface $iface inet dhcp"; } >> /tmp/ifaces.new
+  mv /tmp/ifaces.new /etc/network/interfaces
+  ifdown "$iface" 2>/dev/null || true
