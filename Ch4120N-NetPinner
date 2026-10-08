@@ -718,3 +718,8 @@ main() {
     set)     show_banner; cmd_set    ;;
     revert)  show_banner; cmd_revert ;;
     status)  cmd_status ;;
+    list)    cmd_list ;;
+    help|"") usage ;;
+    *) die "Unknown command: $cmd (try: $0 help)" ;;
+  esac
+}
