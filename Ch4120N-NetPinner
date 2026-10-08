@@ -53,3 +53,8 @@ setup_colors() {
   fi
 }
 setup_colors
+
+# Force colours off, used by the --no-color flag.
+disable_colors() {
+  R=; G=; Y=; B=; C=; M=; BOLD=; DIM=; N=
+}
