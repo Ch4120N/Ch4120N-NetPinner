@@ -378,3 +378,8 @@ PY
     warn "python3 + PyYAML not found, writing a standalone file."
     cat > "$f" <<EOF
 network:
+  version: 2
+  ethernets:
+    $iface:
+      dhcp4: false
+      dhcp6: false
