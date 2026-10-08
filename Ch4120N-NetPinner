@@ -648,3 +648,8 @@ cmd_status() {
     systemd-networkd)
       [ -n "$iface" ] && cat "$(snd_file_for "$iface" 2>/dev/null || echo /dev/null)" 2>/dev/null || true
       ;;
+    ifupdown)
+      grep -A6 -E "iface +$iface" /etc/network/interfaces 2>/dev/null || true
+      ;;
+  esac
+}
