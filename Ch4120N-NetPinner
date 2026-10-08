@@ -463,3 +463,8 @@ termux_status() {
   log "Environment: Termux on Android"
   if command -v termux-wifi-connectioninfo >/dev/null 2>&1; then
     local info
+    info=$(termux-wifi-connectioninfo 2>/dev/null || true)
+    [ -n "$info" ] && printf '  Wi-Fi info:\n%s\n' "$info"
+  fi
+  local iface; iface=$(active_iface || true)
+  if [ -n "$iface" ]; then
