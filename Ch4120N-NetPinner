@@ -548,3 +548,8 @@ interactive_nm() {
   warn "Other Wi-Fi networks keep using DHCP automatically because"
   warn "NetworkManager stores a separate profile per SSID."
 }
+
+# Commands.
+
+# Apply a static IP to the current network.
+cmd_set() {
