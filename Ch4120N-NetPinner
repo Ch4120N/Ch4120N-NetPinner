@@ -343,3 +343,8 @@ EOF
 }
 
 # netplan backend.
+
+# Locate the netplan YAML that references an interface.
+netplan_file_for() {
+  grep -rls "$1" /etc/netplan/*.yaml 2>/dev/null | head -n1
+}
