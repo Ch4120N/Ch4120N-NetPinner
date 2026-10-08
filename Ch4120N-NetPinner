@@ -143,3 +143,8 @@ typewriter() {
   local i
   for (( i=0; i<${#text}; i++ )); do
     printf '%s' "${text:i:1}"
+    sleep "$delay"
+  done
+  printf '\n'
+}
+
