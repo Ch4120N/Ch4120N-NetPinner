@@ -323,3 +323,8 @@ Address=${addr}/${prefix}
 Gateway=$gw
 $(printf 'DNS=%s\n' $(tr ',' ' ' <<<"$dns"))
 EOF
+  systemctl restart systemd-networkd
+}
+
+# Return a systemd-networkd interface to DHCP.
+snd_revert() {
