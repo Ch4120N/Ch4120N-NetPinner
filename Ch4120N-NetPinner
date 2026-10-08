@@ -558,3 +558,8 @@ cmd_set() {
     warn "Use your router's DHCP reservation feature instead."
     exit 1
   fi
+  need_root set
+
+  local backend; backend=$(detect_backend)
+  case "$backend" in
+    networkmanager)
