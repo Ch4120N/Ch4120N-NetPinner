@@ -438,3 +438,8 @@ ifup_set_static() {
   } >> /tmp/ifaces.new
   mv /tmp/ifaces.new /etc/network/interfaces
   ifdown "$iface" 2>/dev/null || true
+  ifup   "$iface"
+}
+
+# Return an ifupdown interface to DHCP.
+ifup_revert() {
