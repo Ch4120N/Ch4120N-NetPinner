@@ -473,3 +473,8 @@ termux_status() {
     printf '  Gateway      : %s\n' "$(iface_gw  "$iface" || echo none)"
   else
     warn "No active IPv4 interface detected."
+  fi
+  warn "Android does not allow changing the IP address without root."
+  warn "Use your router's DHCP reservation page for a permanent IP."
+}
+
