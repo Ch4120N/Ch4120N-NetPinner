@@ -513,3 +513,8 @@ interactive_nm() {
       "Profile : $name" \
       "IP      : $ip/$pfx" \
       "Gateway : $gw" \
+      "DNS     : $dns"
+    read -rp "Proceed? [y/N] " a
+    [[ "$a" =~ ^[Yy]$ ]] || { warn "Aborted."; exit 0; }
+  fi
+
