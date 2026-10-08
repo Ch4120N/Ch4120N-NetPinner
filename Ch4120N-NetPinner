@@ -723,3 +723,5 @@ main() {
     *) die "Unknown command: $cmd (try: $0 help)" ;;
   esac
 }
+
+main "$@"
