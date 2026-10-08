@@ -653,3 +653,8 @@ cmd_status() {
       ;;
   esac
 }
+
+# List saved connection profiles.
+cmd_list() {
+  local backend; backend=$(detect_backend)
+  case "$backend" in
