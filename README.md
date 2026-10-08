@@ -278,3 +278,13 @@ sudo Ch4120N-NetPinner revert
 sudo Ch4120N-NetPinner set
 ```
 </details>
+
+<details>
+<summary><strong>netplan: PyYAML missing</strong></summary>
+
+```bash
+sudo apt install python3-yaml
+```
+NetPinner falls back to a standalone YAML file if PyYAML is unavailable, but merging into your existing netplan file is safer.
+</details>
+
