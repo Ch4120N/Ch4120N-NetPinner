@@ -503,3 +503,8 @@ interactive_nm() {
     ip="$suggest"; pfx="$cur_pfx"; gw="$cur_gw"; dns="${cur_gw},1.1.1.1"
   else
     echo
+    read -rp "Static IP     [$suggest]: " ip;       ip="${ip:-$suggest}"
+    read -rp "Prefix (CIDR) [$cur_pfx]: " pfx;      pfx="${pfx:-$cur_pfx}"
+    read -rp "Gateway       [$cur_gw]: "  gw;       gw="${gw:-$cur_gw}"
+    read -rp "DNS           [${cur_gw},1.1.1.1]: " dns
+    dns="${dns:-${cur_gw},1.1.1.1}"
