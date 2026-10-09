@@ -698,3 +698,8 @@ main() {
   local a
   for a in "$@"; do
     case "$a" in
+      --auto)     AUTO=1 ;;
+      --quiet|-q) QUIET=1 ;;
+      --no-color) disable_colors ;;
+      -h|--help)  args+=("help") ;;
+      *)          args+=("$a") ;;
