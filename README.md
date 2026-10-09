@@ -118,3 +118,13 @@ curl -fsSL https://raw.githubusercontent.com/Ch4120N/Ch4120N-NetPinner/main/Ch41
   -o /tmp/Ch4120N-NetPinner
 chmod +x /tmp/Ch4120N-NetPinner
 sudo mv /tmp/Ch4120N-NetPinner /usr/local/bin/
+```
+
+### Termux
+
+```bash
+pkg install termux-api
+curl -fsSL https://raw.githubusercontent.com/Ch4120N/Ch4120N-NetPinner/main/Ch4120N-NetPinner \
+  -o $PREFIX/bin/Ch4120N-NetPinner
+chmod +x $PREFIX/bin/Ch4120N-NetPinner
+```
