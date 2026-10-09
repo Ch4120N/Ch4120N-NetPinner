@@ -198,3 +198,13 @@ sudo Ch4120N-NetPinner <command> [flags]
 
 **Interactive setup on the current Wi-Fi**
 
+```bash
+sudo Ch4120N-NetPinner set
+```
+
+**Fully automated (great for provisioning)**
+
+```bash
+sudo Ch4120N-NetPinner set --auto --quiet
+```
+
