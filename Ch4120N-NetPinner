@@ -508,3 +508,8 @@ interactive_nm() {
     read -rp "Gateway       [$cur_gw]: "  gw;       gw="${gw:-$cur_gw}"
     read -rp "DNS           [${cur_gw},1.1.1.1]: " dns
     dns="${dns:-${cur_gw},1.1.1.1}"
+    echo
+    print_summary "Planned changes" \
+      "Profile : $name" \
+      "IP      : $ip/$pfx" \
+      "Gateway : $gw" \
