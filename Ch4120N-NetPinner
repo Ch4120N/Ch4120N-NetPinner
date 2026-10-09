@@ -403,3 +403,8 @@ netplan_revert() {
   [ -n "$f" ] || die "No netplan file for $iface"
   cp -a "$f" "${f}.bak.$(date +%s)"
   if command -v python3 >/dev/null 2>&1 && python3 -c 'import yaml' >/dev/null 2>&1; then
+    IFACE="$iface" FILE="$f" python3 - <<'PY'
+import os, yaml
+f = os.environ['FILE']; iface = os.environ['IFACE']
+with open(f) as fh: cfg = yaml.safe_load(fh) or {}
+eth = cfg.get('network', {}).get('ethernets', {}).get(iface, {})
