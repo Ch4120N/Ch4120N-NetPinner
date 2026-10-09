@@ -643,3 +643,8 @@ cmd_status() {
   case "$backend" in
     networkmanager) nm_status ;;
     netplan)
+      [ -n "$iface" ] && grep -rA6 "$iface" /etc/netplan/*.yaml 2>/dev/null || true
+      ;;
+    systemd-networkd)
+      [ -n "$iface" ] && cat "$(snd_file_for "$iface" 2>/dev/null || echo /dev/null)" 2>/dev/null || true
+      ;;
