@@ -223,3 +223,8 @@ active_iface() {
 iface_ipv4() {
   command -v ip >/dev/null 2>&1 \
     && ip -o -4 addr show dev "$1" 2>/dev/null | awk '{print $4; exit}'
+}
+
+# Return the bare IPv4 address of an interface.
+iface_ip() { local x; x=$(iface_ipv4 "$1"); printf '%s' "${x%%/*}"; }
+
