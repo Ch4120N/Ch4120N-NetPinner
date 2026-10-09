@@ -13,3 +13,8 @@
 #   - Termux (Android, informational only)
 #
 # Usage:
+#   sudo Ch4120N-NetPinner set           Interactive setup
+#   sudo Ch4120N-NetPinner set --auto    Accept suggested defaults
+#   sudo Ch4120N-NetPinner revert        Restore DHCP on current profile
+#   sudo Ch4120N-NetPinner status        Show current IP / method / gateway
+#   sudo Ch4120N-NetPinner list          List saved connection profiles
