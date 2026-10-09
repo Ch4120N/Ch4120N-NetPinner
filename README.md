@@ -128,3 +128,13 @@ curl -fsSL https://raw.githubusercontent.com/Ch4120N/Ch4120N-NetPinner/main/Ch41
   -o $PREFIX/bin/Ch4120N-NetPinner
 chmod +x $PREFIX/bin/Ch4120N-NetPinner
 ```
+
+---
+
+## 🚀 Usage
+
+```text
+sudo Ch4120N-NetPinner <command> [flags]
+```
+
+| Command | Description |
