@@ -288,3 +288,8 @@ nm_set_static() {
     ipv4.dns      "$dns"
   nmcli connection up "$conn" >/dev/null
 }
+
+# Return a NetworkManager profile to DHCP.
+nm_revert() {
+  local conn="$1"
+  nmcli connection modify "$conn" \
