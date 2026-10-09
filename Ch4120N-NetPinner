@@ -353,3 +353,8 @@ netplan_file_for() {
 netplan_set_static() {
   local iface="$1" addr="$2" prefix="$3" gw="$4" dns="$5"
   local f; f=$(netplan_file_for "$iface")
+  [ -n "$f" ] || f="/etc/netplan/90-static-${iface}.yaml"
+  [ -f "$f" ] && cp -a "$f" "${f}.bak.$(date +%s)"
+
+  if command -v python3 >/dev/null 2>&1 && \
+     python3 -c 'import yaml' >/dev/null 2>&1; then
