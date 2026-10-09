@@ -333,3 +333,8 @@ snd_revert() {
   [ -n "$f" ] || die "No .network file found for $iface"
   cp -a "$f" "${f}.bak.$(date +%s)"
   cat > "$f" <<EOF
+[Match]
+Name=$iface
+
+[Network]
+DHCP=yes
