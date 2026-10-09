@@ -218,3 +218,13 @@ sudo Ch4120N-NetPinner revert
 
 ```bash
 Ch4120N-NetPinner status
+```
+
+**List every saved connection profile**
+
+```bash
+Ch4120N-NetPinner list
+```
+
+---
+
