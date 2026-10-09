@@ -58,3 +58,8 @@ setup_colors
 disable_colors() {
   R=; G=; Y=; B=; C=; M=; BOLD=; DIM=; N=
 }
+
+# Print an informational message.
+log()  { printf '%s[*]%s %s\n' "$B" "$N" "$*"; }
+# Print a success message.
+ok()   { printf '%s[+]%s %s\n' "$G" "$N" "$*"; }
