@@ -108,3 +108,8 @@ spinner_stop() {
   [ -n "$final" ] && printf '%s\n' "$final"
   return 0
 }
+
+# Run a command behind a spinner and report success or failure.
+run_spin() {
+  local msg="$1"; shift
+  local logfile="${TMPDIR:-/tmp}/netpinner.$$.log"
