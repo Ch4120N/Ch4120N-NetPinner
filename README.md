@@ -58,3 +58,13 @@ $ sudo Ch4120N-NetPinner set
 Ch4120N-NetPinner
 Static IP helper for Linux and Termux
 
+[*] Active profile: HomeWiFi on wlan0 (802-11-wireless)
+
+Static IP     [192.168.1.50]:
+Prefix (CIDR) [24]:
+Gateway       [192.168.1.1]:
+DNS           [192.168.1.1,1.1.1.1]:
+
+────────────────────────────
+Planned changes
+────────────────────────────
