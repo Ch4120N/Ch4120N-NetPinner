@@ -258,3 +258,8 @@ nm_active_line() {
 # Print the current NetworkManager status.
 nm_status() {
   log "Backend: NetworkManager"
+  local line name dev type
+  line=$(nm_active_line || true)
+  if [ -z "${line:-}" ]; then
+    warn "No active connection."
+    return
