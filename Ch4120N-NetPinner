@@ -468,3 +468,8 @@ termux_status() {
   fi
   local iface; iface=$(active_iface || true)
   if [ -n "$iface" ]; then
+    printf '  Active iface : %s\n' "$iface"
+    printf '  IPv4         : %s\n' "$(iface_ipv4 "$iface" || echo none)"
+    printf '  Gateway      : %s\n' "$(iface_gw  "$iface" || echo none)"
+  else
+    warn "No active IPv4 interface detected."
