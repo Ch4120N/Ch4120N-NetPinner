@@ -408,3 +408,8 @@ import os, yaml
 f = os.environ['FILE']; iface = os.environ['IFACE']
 with open(f) as fh: cfg = yaml.safe_load(fh) or {}
 eth = cfg.get('network', {}).get('ethernets', {}).get(iface, {})
+eth.pop('addresses', None); eth.pop('routes', None); eth.pop('nameservers', None)
+eth['dhcp4'] = True; eth['dhcp6'] = True
+with open(f, 'w') as fh: yaml.safe_dump(cfg, fh, sort_keys=False)
+PY
+    netplan apply
