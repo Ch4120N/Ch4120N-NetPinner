@@ -18,3 +18,8 @@
 #   sudo Ch4120N-NetPinner revert        Restore DHCP on current profile
 #   sudo Ch4120N-NetPinner status        Show current IP / method / gateway
 #   sudo Ch4120N-NetPinner list          List saved connection profiles
+#   sudo Ch4120N-NetPinner help          Show help
+#
+# Flags:
+#   --auto        Non-interactive, accept defaults
+#   --quiet, -q   Disable spinner animation
