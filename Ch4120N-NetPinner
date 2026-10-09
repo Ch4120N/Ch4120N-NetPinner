@@ -73,3 +73,8 @@ die()  { err "$*"; exit 1; }
 # Stop a running spinner without printing anything.
 spinner_cleanup() {
   if [ -n "${SPINNER_PID:-}" ] && kill -0 "$SPINNER_PID" 2>/dev/null; then
+    kill "$SPINNER_PID" 2>/dev/null || true
+    wait "$SPINNER_PID" 2>/dev/null || true
+  fi
+  SPINNER_PID=""
+}
