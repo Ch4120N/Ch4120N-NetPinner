@@ -188,3 +188,8 @@ has_systemctl() { command -v systemctl >/dev/null 2>&1; }
 # Abort unless the caller is root.
 need_root() {
   [ "${EUID:-$(id -u)}" -eq 0 ] \
+    || die "This command requires root. Try: sudo $0 ${1:-<command>}"
+}
+
+# Identify the active network backend.
+detect_backend() {
