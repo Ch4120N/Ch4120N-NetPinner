@@ -658,3 +658,8 @@ cmd_status() {
 cmd_list() {
   local backend; backend=$(detect_backend)
   case "$backend" in
+    networkmanager)   nm_list ;;
+    netplan)          ls -1 /etc/netplan/ ;;
+    systemd-networkd) ls -1 /etc/systemd/network/ ;;
+    ifupdown)         grep -E '^iface' /etc/network/interfaces ;;
+    termux)           warn "Nothing to list on Termux." ;;
