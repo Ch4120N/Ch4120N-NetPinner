@@ -303,3 +303,8 @@ nm_revert() {
 # systemd-networkd backend.
 
 # Locate the .network file that matches an interface.
+snd_file_for() {
+  grep -rls "^Name=$1\$" /etc/systemd/network/*.network 2>/dev/null | head -n1
+}
+
+# Apply a static configuration via systemd-networkd.
