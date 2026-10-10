@@ -613,3 +613,8 @@ cmd_revert() {
       local line name
       line=$(nm_active_line || true)
       [ -n "${line:-}" ] || die "No active NetworkManager connection."
+      name=$(cut -d: -f1 <<<"$line")
+      run_spin "Reverting '$name' to DHCP" nm_revert "$name"
+      ;;
+    netplan)          run_spin "Reverting netplan configuration"         netplan_revert "$(active_iface)" ;;
+    systemd-networkd) run_spin "Reverting systemd-networkd configuration" snd_revert     "$(active_iface)" ;;
