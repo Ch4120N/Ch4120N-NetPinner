@@ -138,3 +138,8 @@ print_summary() {
 }
 
 # Type a string with a small per-character delay.
+typewriter() {
+  local text="$1" delay="${2:-0.012}"
+  local i
+  for (( i=0; i<${#text}; i++ )); do
+    printf '%s' "${text:i:1}"
