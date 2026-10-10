@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎯 Ch4120N-NetPinner
+# 🎯 Ch4120N NetPinner
 
 **Make your machine's IPv4 address permanent on the current network — without breaking other Wi-Fi/Ethernet networks.**
 
