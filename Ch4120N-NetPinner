@@ -253,3 +253,8 @@ ip_in_use() {
 nm_active_line() {
   nmcli -t -f NAME,DEVICE,TYPE connection show --active 2>/dev/null \
     | grep -vE '^(docker|veth|br-|virbr)' | head -n1
+}
+
+# Print the current NetworkManager status.
+nm_status() {
+  log "Backend: NetworkManager"
