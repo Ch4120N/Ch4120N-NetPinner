@@ -608,3 +608,8 @@ cmd_revert() {
   need_root revert
 
   local backend; backend=$(detect_backend)
+  case "$backend" in
+    networkmanager)
+      local line name
+      line=$(nm_active_line || true)
+      [ -n "${line:-}" ] || die "No active NetworkManager connection."
