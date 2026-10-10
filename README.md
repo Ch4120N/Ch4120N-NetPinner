@@ -107,14 +107,14 @@ Proceed? [y/N] y
 ```bash
 git clone https://github.com/Ch4120N/Ch4120N-NetPinner.git
 cd Ch4120N-NetPinner
-chmod +x Ch4120N-NetPinner
-sudo mv Ch4120N-NetPinner /usr/local/bin/
+chmod +x Ch4120N-NetPinner.sh
+sudo mv Ch4120N-NetPinner.sh /usr/local/bin/Ch4120N-NetPinner
 ```
 
 ### Manual install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Ch4120N/Ch4120N-NetPinner/main/Ch4120N-NetPinner \
+curl -fsSL https://raw.githubusercontent.com/Ch4120N/Ch4120N-NetPinner/master/Ch4120N-NetPinner.sh \
   -o /tmp/Ch4120N-NetPinner
 chmod +x /tmp/Ch4120N-NetPinner
 sudo mv /tmp/Ch4120N-NetPinner /usr/local/bin/
@@ -124,7 +124,7 @@ sudo mv /tmp/Ch4120N-NetPinner /usr/local/bin/
 
 ```bash
 pkg install termux-api
-curl -fsSL https://raw.githubusercontent.com/Ch4120N/Ch4120N-NetPinner/main/Ch4120N-NetPinner \
+curl -fsSL https://raw.githubusercontent.com/Ch4120N/Ch4120N-NetPinner/master/Ch4120N-NetPinner.sh \
   -o $PREFIX/bin/Ch4120N-NetPinner
 chmod +x $PREFIX/bin/Ch4120N-NetPinner
 ```
