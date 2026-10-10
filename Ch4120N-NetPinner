@@ -273,3 +273,8 @@ nm_status() {
   printf '  Gateway    : %s\n' "$(iface_gw  "$dev" || echo none)"
   printf '  Method     : %s\n' "$(nmcli -t -f ipv4.method connection show "$name" | cut -d: -f2)"
   printf '  DNS        : %s\n' "$(nmcli -t -f IP4.DNS connection show "$name" | cut -d: -f2 | paste -sd, -)"
+}
+
+# List NetworkManager connections.
+nm_list() { nmcli -f NAME,DEVICE,TYPE,STATE connection show; }
+
