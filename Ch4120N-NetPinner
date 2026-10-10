@@ -423,3 +423,8 @@ PY
 # Apply a static configuration via /etc/network/interfaces.
 ifup_set_static() {
   local iface="$1" addr="$2" prefix="$3" gw="$4" dns="$5"
+  cp -a /etc/network/interfaces "/etc/network/interfaces.bak.$(date +%s)"
+  awk -v i="$iface" '
+    $1=="iface" && $2==i {skip=1}
+    skip && /^$/ {skip=0}
+    !skip {print}
