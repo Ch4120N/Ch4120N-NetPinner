@@ -8,3 +8,8 @@
 # Supported backends:
 #   - NetworkManager
 #   - netplan
+#   - systemd-networkd
+#   - ifupdown
+#   - Termux (Android, informational only)
+#
+# Usage:
