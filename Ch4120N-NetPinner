@@ -663,3 +663,8 @@ cmd_list() {
     systemd-networkd) ls -1 /etc/systemd/network/ ;;
     ifupdown)         grep -E '^iface' /etc/network/interfaces ;;
     termux)           warn "Nothing to list on Termux." ;;
+    *)                warn "Nothing to list." ;;
+  esac
+}
+
+# Show usage information.
