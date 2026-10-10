@@ -293,3 +293,8 @@ nm_set_static() {
 nm_revert() {
   local conn="$1"
   nmcli connection modify "$conn" \
+    ipv4.method auto \
+    ipv4.addresses "" \
+    ipv4.gateway  "" \
+    ipv4.dns      ""
+  nmcli connection up "$conn" >/dev/null
