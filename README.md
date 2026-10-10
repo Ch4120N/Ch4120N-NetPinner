@@ -188,3 +188,13 @@ sudo Ch4120N-NetPinner <command> [flags]
 |---|---|
 | `--auto` | Non-interactive mode, accept suggested defaults |
 | `--quiet`, `-q` | Disable spinner animation |
+| `--no-color` | Disable ANSI colours |
+| `NO_COLOR=1` | Same as `--no-color` |
+| `NETPINNER_QUIET=1` | Same as `--quiet` |
+
+---
+
+## 📋 Examples
+
+**Interactive setup on the current Wi-Fi**
+
