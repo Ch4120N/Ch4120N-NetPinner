@@ -113,3 +113,8 @@ spinner_stop() {
 run_spin() {
   local msg="$1"; shift
   local logfile="${TMPDIR:-/tmp}/netpinner.$$.log"
+  spinner_start "$msg"
+  local rc=0
+  "$@" >"$logfile" 2>&1 || rc=$?
+  if [ "$rc" -eq 0 ]; then
+    spinner_stop "$(printf '%s[+]%s %s' "$G" "$N" "$msg")"
