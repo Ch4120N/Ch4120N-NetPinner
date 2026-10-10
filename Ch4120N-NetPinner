@@ -383,3 +383,8 @@ network:
     $iface:
       dhcp4: false
       dhcp6: false
+      addresses: [${addr}/${prefix}]
+      routes:
+        - to: default
+          via: $gw
+      nameservers:
