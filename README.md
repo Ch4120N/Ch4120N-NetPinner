@@ -18,3 +18,13 @@
 ## 📖 Table of Contents
 
 - [✨ Features](#-features)
+- [🎬 Demo](#-demo)
+- [🖥️ Supported Platforms](#️-supported-platforms)
+- [📦 Installation](#-installation)
+- [🚀 Usage](#-usage)
+- [🧠 How It Works](#-how-it-works)
+- [⚙️ Flags & Environment](#️-flags--environment)
+- [📋 Examples](#-examples)
+- [📱 Termux Notes](#-termux-notes)
+- [🛠️ Troubleshooting](#️-troubleshooting)
+- [🤝 Contributing](#-contributing)
