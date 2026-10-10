@@ -148,3 +148,13 @@ sudo Ch4120N-NetPinner <command> [flags]
 
 ---
 
+## 🧠 How It Works
+
+```text
+┌────────────────────┐
+│  Detect backend    │
+│  (nm / netplan /   │
+│   snd / ifupdown)  │
+└─────────┬──────────┘
+          │
+          ▼
