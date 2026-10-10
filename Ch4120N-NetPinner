@@ -218,3 +218,8 @@ active_iface() {
     ip -o -4 route show default 2>/dev/null | awk '{print $5; exit}'
   fi
 }
+
+# Return IPv4 address with prefix length (e.g. 192.168.1.10/24).
+iface_ipv4() {
+  command -v ip >/dev/null 2>&1 \
+    && ip -o -4 addr show dev "$1" 2>/dev/null | awk '{print $4; exit}'
