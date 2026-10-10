@@ -78,3 +78,8 @@ spinner_cleanup() {
   fi
   SPINNER_PID=""
 }
+trap spinner_cleanup EXIT
+
+# Start an animated spinner for a long-running task.
+spinner_start() {
+  local msg="$1"
