@@ -533,3 +533,8 @@ interactive_nm() {
   printf '  IPv4    : %s\n' "$(iface_ipv4 "$dev" || echo none)"
   printf '  Gateway : %s\n' "$(iface_gw  "$dev" || echo none)"
   if ping -c1 -W2 "$gw" >/dev/null 2>&1; then
+    ok "Gateway reachable."
+  else
+    warn "Gateway not reachable."
+  fi
+  if ping -c1 -W2 1.1.1.1 >/dev/null 2>&1; then
