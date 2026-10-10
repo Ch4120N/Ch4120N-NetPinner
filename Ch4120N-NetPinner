@@ -488,3 +488,8 @@ interactive_nm() {
   name=$(cut -d: -f1 <<<"$line")
   dev=$(cut -d: -f2 <<<"$line")
   type=$(cut -d: -f3 <<<"$line")
+
+  log "Active profile: ${G}${name}${N} on ${dev} (${type})"
+
+  local cur_cidr cur_ip cur_pfx cur_gw base suggest
+  cur_cidr=$(iface_ipv4 "$dev" || true)
